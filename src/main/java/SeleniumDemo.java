@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
+import java.awt.*;
 import java.io.File;
 
 public class SeleniumDemo {
@@ -24,9 +25,18 @@ public class SeleniumDemo {
         System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
         //System.getProperty("driver.chrome");
         WebDriver chrome = new ChromeDriver();
-        chrome.get("https://www.bing.com/");
+        chrome.get("https://master.jazva.com/login.jsp");
         //chrome.wait(10);
-
+        WebElement uname = chrome.findElement(By.xpath("//*[@id=\"username\"]"));
+        uname.clear();
+        uname.sendKeys("test");
+        WebElement pass = chrome.findElement(By.xpath("//*[@id=\"password\"]"));
+        pass.clear();
+        pass.sendKeys("123456jz");
+        WebElement login = chrome.findElement(By.xpath("//*[@id=\"login\"]/div[2]/div[2]/div[2]/div[1]/form/div[3]/input"));
+        login.click();
+        //chrome.wait(10);
+        chrome.close();
         chrome.quit();
 
     }
