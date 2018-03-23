@@ -33,9 +33,9 @@ public class SeleniumDemo {
         WebElement pass = chrome.findElement(By.xpath("//*[@id=\"password\"]"));
         pass.clear();
         pass.sendKeys("123456jz");
-        WebElement login = chrome.findElement(By.xpath("//*[@id=\"login\"]/div[2]/div[2]/div[2]/div[1]/form/div[3]/input"));
-        login.click();
-        //chrome.wait(10);
+        //chrome.findElement(By.className("btn btn-primary")).click();
+        chrome.findElement(By.xpath("//*[@id=\"login\"]/div[2]/div[2]/div[2]/div[1]/form/div[3]/input")).click();
+        chrome.wait(10);
         chrome.close();
         chrome.quit();
 
