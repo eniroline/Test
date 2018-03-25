@@ -1,14 +1,12 @@
+import junit.framework.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-
-import java.awt.*;
-import java.io.File;
+//import org.testng.asserts.SoftAssert;
 
 public class SeleniumDemo {
+    //SoftAssert softAssert = new SoftAssert();
     public static void main(String[] args) throws InterruptedException {
         //WebDriver firefoxDriver = new FirefoxDriver();
         //firefoxDriver.get("https://www.bing.com/");
@@ -35,7 +33,9 @@ public class SeleniumDemo {
         pass.sendKeys("123456jz");
         //chrome.findElement(By.className("btn btn-primary")).click();
         chrome.findElement(By.xpath("//*[@id=\"login\"]/div[2]/div[2]/div[2]/div[1]/form/div[3]/input")).click();
-        chrome.wait(10);
+        chrome.findElement(By.xpath("//*[@id=\"mainnav\"]/ul/li[2]/a/span[1]")).click();
+        Assert.assertTrue("Text 'Контактная информация' is absent", chrome.getPageSource().contains("Tasks"));
+        //chrome.wait(10);
         chrome.close();
         chrome.quit();
 
