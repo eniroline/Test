@@ -8,14 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SeleniumDemo {
     //SoftAssert softAssert = new SoftAssert();
     public static void main(String[] args) throws InterruptedException {
-        //WebDriver firefoxDriver = new FirefoxDriver();
-        //firefoxDriver.get("https://www.bing.com/");
-          //By by = By.className("b_searchbox");
-          //WebElement element = firefoxDriver.findElement(by);
 
-      // firefoxDriver.quit();
-          //File file = new File("C:/Selenium/IEDriverServer.exe");
-          //System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
+        //By by = By.className("b_searchbox");
+        //System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
         //WebDriver explorer = new InternetExplorerDriver();
         //explorer.get("https://www.bing.com/");
         //explorer.quit();
