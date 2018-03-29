@@ -26,7 +26,7 @@ public class SeleniumDemo {
         chrome.findElement(By.xpath("//*[@id=\"mainnav\"]/ul/li[2]/div/ul/li[11]/a")).click();
 /*        boolean isTheTextPresent = chrome.getPageSource().contains("Error");
         Assert.assertFalse(isTheTextPresent);*/
-        Assert.assertFalse("Error on the page 'Orders - Shipping'", chrome.getPageSource().contains("Error"));
+        Assert.assertFalse("Error on the page 'Orders - Shipping'", chrome.getPageSource().contains("Error Code"));
         Assert.assertTrue("Text 'Tasks' is absent", chrome.getPageSource().contains("Shipment"));
         //chrome.wait(10);
         chrome.close();
