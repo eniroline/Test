@@ -1,4 +1,4 @@
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,8 +22,10 @@ public class SeleniumDemo {
         Assert.assertFalse("Error on page", chrome.getPageSource().contains("Error"));
         Assert.assertTrue("Text 'Tasks' is absent", chrome.getPageSource().contains("Tasks"));
         Assert.assertTrue("Text 'Alerts", chrome.getPageSource().contains("Alerts"));
-        
+
         chrome.findElement(By.xpath("//*[@id=\"mainnav\"]/ul/li[2]/div/ul/li[11]/a")).click();
+/*        boolean isTheTextPresent = chrome.getPageSource().contains("Error");
+        Assert.assertFalse(isTheTextPresent);*/
         Assert.assertFalse("Error on the page 'Orders - Shipping'", chrome.getPageSource().contains("Error"));
         Assert.assertTrue("Text 'Tasks' is absent", chrome.getPageSource().contains("Shipment"));
         //chrome.wait(10);
